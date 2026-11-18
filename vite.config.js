@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/Kiruthika-portfolio/",
   publicDir: "public",
+  build: {
+    copyPublicDir: true,
+  },
 });
