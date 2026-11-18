@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const menuLinks = [
   { label: "Work", href: "#experience" },
@@ -23,13 +24,13 @@ export default function Navbar() {
       >
         <a
           href="/"
-          className={`justify-self-start rounded-sm text-2xl font-bold tracking-[-0.05em] ${focusRing}`}
-          style={{
-            fontFamily:
-              "'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif",
-          }}
+          className={`justify-self-start ${focusRing}`}
         >
-          Kiruthika
+          <img
+            src={logo}
+            alt="Kiruthika Narayaan"
+            className="h-14 w-auto object-contain"
+          />
         </a>
 
         <ul className="col-span-2 col-start-1 row-start-2 m-0 flex list-none justify-center gap-4 p-0 sm:col-span-1 sm:col-start-2 sm:row-start-1 sm:gap-5 lg:gap-8">
