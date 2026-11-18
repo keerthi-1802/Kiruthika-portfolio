@@ -1,3 +1,4 @@
+
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -32,10 +33,13 @@ function Home() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work/tanan-admin-panel" element={<TananAdminPanel />} />
+        <Route
+          path="/work/tanan-admin-panel"
+          element={<TananAdminPanel />}
+        />
         <Route path="/work/gnxt" element={<GnxtCaseStudy />} />
       </Routes>
     </BrowserRouter>
