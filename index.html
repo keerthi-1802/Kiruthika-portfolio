@@ -1,14 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Kiruthika-portfolio/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <script type="module" crossorigin src="/Kiruthika-portfolio/assets/index-kERTgMzu.js"></script>
-    <link rel="stylesheet" crossorigin href="/Kiruthika-portfolio/assets/index-D70xxYbh.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/Kiruthika-portfolio/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+  <script>
+    (function (location) {
+      if (location.search[1] === "/") {
+        const decoded = location.search
+          .slice(1)
+          .split("&")
+          .map((value) => value.replace(/~and~/g, "&"));
+
+        const path = decoded[0].slice(1);
+        const query = decoded.slice(1).join("&");
+
+        window.history.replaceState(
+          null,
+          null,
+          location.pathname.replace(/\/$/, "") +
+          "/" +
+          path +
+          (query ? "?" + query : "") +
+          location.hash
+        );
+      }
+    })(window.location);
+  </script>
+  <script type="module" crossorigin src="/Kiruthika-portfolio/assets/index-kERTgMzu.js"></script>
+  <link rel="stylesheet" crossorigin href="/Kiruthika-portfolio/assets/index-D70xxYbh.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
